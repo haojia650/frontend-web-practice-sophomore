@@ -1,0 +1,444 @@
+/* ===== 基础重置与全局样式 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e67e22;
+    --secondary-color: #6dbf2d;
+    --dark-orange: #d35400;
+    --text-dark: #2c3e50;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff9ed;
+    font-family: "微软雅黑", system-ui;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ===== 头部导航 ===== */
+#header {
+    background: var(--primary-color) url(../images/header-bg.png) repeat-x;
+    border-bottom: 3px solid var(--dark-orange);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav li {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.logo img {
+    width: clamp(60px, 8vw, 100px);
+    height: auto;
+    aspect-ratio: 1;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.nav li a {
+    display: block;
+    padding: 1rem 0.5rem;
+    color: white;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    border-radius: 4px;
+}
+
+.nav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== 主内容区 ===== */
+#content {
+    width: 100%;
+    max-width: 980px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Banner区域 */
+.banner {
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    width: 100%;
+    height: 50vh;
+    max-height: 400px;
+    min-height: 250px;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* 特色专区（按用户原结构保留类名和路径） */
+/* 以下为新增的文档匹配样式，其他CSS保持用户原代码不变 */
+.style_bg {
+    width: 908px;           /* 文档固定宽度 */
+    height: 330px;          /* 文档高度 */
+    background: #6dbf2d;    /* 文档背景色 */
+    padding: 10px 36px 5px; /* 文档内边距 */
+    margin: 2rem auto;
+}
+
+.style {
+    width: 892px;           /* 文档容器宽度 */
+    height: 314px;          /* 文档高度 */
+    background: #fff;       /* 文档背景色 */
+    padding: 8px 10px 8px 6px;
+    overflow: hidden;       /* 清除浮动 */
+}
+
+.style dl {
+    width: 279px;           /* 前两个模块宽度 */
+    height: 313px;          /* 文档高度 */
+    float: left;            /* 文档浮动布局 */
+    margin-left: 4px;       /* 模块间距 */
+}
+
+/* 第三个模块专属宽度（必须保留） */
+.style .third {
+    width: 322px; /* 比前两个模块宽，文档中固定值 */
+    margin-left: 4px; /* 与前两个模块保持间距 */
+}
+
+.style dt, .style dd {
+    float: left;            /* dt/dd浮动排列 */
+}
+
+
+/* 日料专区图片和文字样式（可复制左侧/中间模块类名，建议新建类名避免冲突） */
+.new-left1 {
+    width: 162px;           /* 图片宽度（与文档一致） */
+    height: 169px;          /* 图片高度（可自定义，建议与左侧模块等高） */
+    background:url(d7b440b21a49f39fde430d7033cb34b.png) no-repeat;
+    background-size: cover; /* 图片撑满容器 */
+}
+
+.new-left2 {
+    width: 117px;           /* 文字宽度（与文档一致） */
+    height: 169px;          /* 与图片等高 */
+    line-height: 169px;     /* 垂直居中 */
+    text-align: center;
+    background: #f2f2f2;    /* 文字背景色（文档同款） */
+}
+
+/* hover效果（与文档一致） */
+.new-left2 a:hover {
+    background: #6dbf2d;    /* 鼠标悬停背景色 */
+    color: #fff;
+}
+
+/* 韩料专区图片和文字样式（新增） */
+.new-left3 {
+    width: 162px;           /* 图片宽度（与文档一致） */
+    height: 169px;          /* 图片高度（可自定义，建议与左侧模块等高） */
+    background:url(fc9de389eeaf7896c1e43b259676c77.png) no-repeat; /* 替换为实际图片路径 */
+    background-size: cover; /* 图片撑满容器 */
+}
+
+.new-left4 {
+    width: 117px;           /* 文字宽度（与文档一致） */
+    height: 169px;          /* 与图片等高 */
+    line-height: 169px;     /* 垂直居中 */
+    text-align: center;
+    background: #f2f2f2;    /* 文字背景色（文档同款） */
+}
+
+.new-left4 a:hover {
+    background: #6dbf2d;    /* 鼠标悬停背景色 */
+    color: #fff;
+}
+
+/* 左侧模块：西餐/甜点专区（匹配文档尺寸） */
+.style .left1 {
+    width: 162px; height: 169px; background: url(acd395995aec4308d104016b3108f81.png) no-repeat;
+    background-size: cover; /* 图片覆盖 */
+}
+.style .left2 { width: 117px; height: 169px; line-height: 169px; background: #f2f2f2; text-align: center; }
+.style .left3 { width: 162px; height: 137px; background: url(424aa6b156aee76462c95647c34da58.png) no-repeat; background-size: cover; }
+.style .left4 { width: 117px; height: 137px; line-height: 137px; background: #f2f2f2; text-align: center; }
+
+/* 中间模块：中餐/饮品专区（匹配文档尺寸） */
+.style .center1 { width: 162px; height: 117px; background: url(419f4b6932f943e20ca087c5e5e6e2e.png) no-repeat; background-size: cover; }
+.style .center2 { width: 117px; height: 117px; line-height: 117px; background: #f2f2f2; text-align: center; margin-bottom: 8px; }
+.style .center3 { width: 162px; height: 188px; background: url(5b7ef89f530597b46b1aa97da3d1444.png) no-repeat; background-size: cover; }
+.style .center4 { width: 117px; height: 188px; line-height: 188px; background: #f2f2f2; text-align: center; }
+
+/* 右侧模块：大师课程专区（匹配文档尺寸） */
+.style .right1 {
+    width: 205px; /* 文档中右侧图片宽度 */
+    height: 314px; /* 文档中右侧图片高度 */
+    background-size: cover; /* 图片撑满容器 */
+}
+
+.style .right2 {
+    width: 117px; /* 文档中右侧文字宽度（与前两个模块的dd一致） */
+    height: 314px; /* 与图片等高 */
+    line-height: 314px; /* 垂直居中 */
+    text-align: center;
+    background: #f2f2f2; /* 文档文字背景色 */
+}
+/* 文档中的hover效果 */
+.style a { display: block; width: 100%; color: #333; }
+.style a:hover { background: #6dbf2d; color: #fff; }
+
+/* 课程专区（删除分子料理课，保留其他原路径） */
+h2 {
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 0.5rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    font-weight: normal;
+}
+
+.current {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #dcd2ba;
+}
+
+.current dl {
+    border: 1px solid #dcd2ba;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.current dl:hover {
+    box-shadow: 0 6px 15px rgba(230, 126, 34, 0.2);
+}
+
+.current dt {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    /* 保留用户原match图片路径 */
+     /* match_1 */
+}
+
+.current01 {
+    padding: 1rem;
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 1.25rem;
+}
+
+.current02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    margin: 1rem auto;
+    width: fit-content;
+    border-radius: 19px;
+}
+
+.current02:hover {
+    background: var(--dark-orange);
+}
+
+/* ===== 页脚 ===== */
+#footer {
+    background: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 768px) {
+    .nav {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .nav li {
+        flex: 0 1 30%;
+        margin: 0.25rem;
+    }
+    
+    .style {
+        grid-template-columns: 1fr;
+    }
+    
+    .current {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .current02 {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav li {
+        flex: 0 1 45%;
+    }
+    
+    .current {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: 1.125rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* 严格保留用户原图片路径（示例，按用户代码中的实际路径填写） */
+.style .left1 { background-image: url(acd395995aec4308d104016b3108f81.png); }
+.style .left3 { background-image: url(424aa6b156aee76462c95647c34da58.png); }
+.style .center1 { background-image: url(419f4b6932f943e20ca087c5e5e6e2e.png); }
+.style .center3 { background-image: url(5b7ef89f530597b46b1aa97da3d1444.png); }
+.style .right1 { background-image: url(2ab580257474522ba8b3c96338d30fa.png); }
+
+.match_1 { background-image:url(08fd169dcf8710cdf0e5538b345dc2f.png) }
+.match_2 { background-image:url(ae3e1b5451716e30f0984ffc7996699.png) }
+.match_3 { background-image:url(813f488d9def14d7dc7d314990117e9.png) }
+/* match_4 模块已删除，路径无需保留 */
+
+/* 视频相关样式（完全保留用户原代码） */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 800px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.9);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.video-overlay h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 其他视频背景和响应式样式...（完全保留用户原代码） */
+/* ===== 全屏视频背景（重点修复样式） ===== */
+.global-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* 明确设置视口高度 */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fullscreen-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 强制占满视口高度 */
+}
+
+.fullscreen-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    object-fit: cover; /* 覆盖容器，保持比例 */
+    z-index: 0;
+    filter: brightness(0.85);
+}
+
+/* 移除之前的translate定位，改用top/left:0实现更稳定的全屏 */
+/* 原代码中的transform: translate(-50%, -50%)可能导致边缘空白，现已移除 */
+
+.video-overlay {
+    /* 其他样式不变，确保覆盖层正确显示 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(255,249,237,0.15) 0%,
+        rgba(230,126,34,0.1) 50%,
+        rgba(109,191,45,0.1) 100%
+    );
+    z-index: 1;
+}
+

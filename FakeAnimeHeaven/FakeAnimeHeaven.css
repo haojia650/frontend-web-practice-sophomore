@@ -1,0 +1,289 @@
+ :root {
+      --primary-pink: #ff85a2;    /* 主色粉 */
+      --secondary-aqua: #63e6be;  /* 辅助水蓝 */
+      --text-dark: #2d2d2d;       /* 深灰文字 */
+      --bg-soft: #fdf2f5;         /* 浅粉背景 */
+      --gradient-header: linear-gradient(90deg, var(--primary-pink) 0%, var(--secondary-aqua) 100%); /* 顶部渐变 */
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      margin: 0;
+      color: var(--text-dark);
+      background: var(--bg-soft);
+    }
+
+    /* 顶部导航核心样式 */
+    #head {
+      background: var(--gradient-header);
+      box-shadow: 0 4px 15px rgba(255,133,162,0.15);
+      padding: 0.5rem 0;
+    }
+    .con {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    .left, .right {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .left li, .right li {
+      display: inline-block;
+      margin: 0 1.2rem;
+      cursor: pointer;
+      color: white;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.6rem 1rem;
+      position: relative;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      border-radius: 8px;
+    }
+    .left li:hover, .right li:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.1);
+    }
+    .left li::after, .right li::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: white;
+      border-radius: 1px;
+      transition: all 0.3s;
+    }
+    .left li:hover::after, .right li:hover::after {
+      width: 60%;
+      left: 20%;
+    }
+    .right li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .right li i {
+      font-size: 1.1rem;
+    }
+
+    /* 轮播图样式 */
+    .banner {
+      background: var(--gradient-header);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .banner_pic .ban {
+      width: 800px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(255,133,162,0.25);
+    }
+    .banner p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .banner .ty2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    #button {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 0;
+    }
+    #button li {
+      width: 12px;
+      height: 12px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #button li.current {
+      background: white;
+      width: 24px;
+      border-radius: 6px;
+    }
+
+    /* 热门番剧区域 */
+    .hot {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .hot h2 {
+      color: var(--primary-pink);
+      border-left: 4px solid var(--secondary-aqua);
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .hot video {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 20px rgba(255,133,162,0.1);
+    }
+    .hot-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+    .anime-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(255,133,162,0.05);
+    }
+    .anime-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255,133,162,0.1);
+    }
+    .anime-cover {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .anime-title {
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-dark);
+    }
+
+    /* 热门达人区域 */
+    .share {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .share h2 {
+      color: var(--primary-pink);
+      border-left: 4px solid var(--secondary-aqua);
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .share-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .share a {
+      text-decoration: none;
+      color: var(--text-dark);
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(255,133,162,0.05);
+    }
+    .share a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255,133,162,0.1);
+    }
+    .hover-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .hover-container img {
+      width: 100%;
+      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .cur {
+      text-align: center;
+      margin-top: -2.5rem;
+      padding: 0 0.5rem 0.5rem;
+      background: linear-gradient(to top, rgba(255,255,255,0.9) 30%, transparent 100%);
+    }
+    .cur h3 {
+      margin: 0.5rem 0 0.3rem;
+      font-size: 1.1rem;
+      color: var(--primary-pink);
+    }
+    .cur p {
+      margin: 0 0 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .subscribe-btn {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      background: var(--primary-pink);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 500;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .hover-container:hover .subscribe-btn {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* 底部样式 */
+    #footer {
+      background: var(--gradient-header);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    #footer .foot {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    #footer span {
+      display: inline-block;
+      cursor: pointer;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.1);
+      transition: all 0.3s;
+      margin-bottom: 1rem;
+    }
+    #footer span:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 3px 10px rgba(255,255,255,0.2);
+    }
+    #footer span:active {
+      transform: translateY(0);
+    }
+    #footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }

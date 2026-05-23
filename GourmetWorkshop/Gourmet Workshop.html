@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>美食工坊官网</title>
+    <link href="ykcss.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <ul class="nav">
+            <li class="logo"><img src="95cdf50d6c6c3c63fe4db8d62711175.png" alt="美食工坊logo"></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">课程体系</a></li>
+            <li><a href="#">厨师团队</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">美食活动</a></li>
+        </ul>
+    </header>
+    
+    <!-- 修改全局背景结构 -->
+    <div class="global-bg">
+        <!-- 全屏视频容器 -->
+        <div class="fullscreen-video">
+            <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            poster="video-poster.jpg" 
+            width="100%" 
+            height="100%"
+        >
+            <source src="EP14_steam.mp4" type="video/mp4">
+            <source src="EP14_steam.webm" type="video/webm">
+            <img src="fallback-bg.jpg" alt="厨房背景" width="100%" height="100%">
+        </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <!-- 可选保留其他背景元素 -->
+        <div class="bg-particles"></div>
+    </div>
+    
+    <main id="content" class="content-overlay">
+        <section class="banner">
+            <div class="video-container">
+                <!-- 视频元素 -->
+                <video autoplay muted loop playsinline poster="video-poster.jpg">
+                    <source src="君名、言叶、天子美食混剪(无bgm）.mp4" type="video/mp4">
+                    <source src="君名、言叶、天子美食混剪(无bgm）.webm" type="video/webm">
+                    <!-- 备用图片 -->
+                    <img src="96fba31506ac6ed41f3233030ee8500.png" alt="美食背景">
+                </video>
+                
+                <!-- 视频内容覆盖层 -->
+                <div class="video-overlay">
+                    <h1>发现美食艺术</h1>
+                    <a href="#courses" class="cta-button">立即探索课程</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="style_bg">
+            <div class="style">
+                <!-- 按照文档结构调整的专区布局（保留用户原类名和路径） -->
+                <dl>
+                    <dt class="left1"></dt>
+                    <dd class="left2"><a href="#">西餐专区</a></dd>
+                    <dt class="left3"></dt>
+                    <dd class="left4"><a href="#">甜点专区</a></dd>
+                </dl>
+                <!-- 第二个DL：中餐专区、饮品专区（2组dt+dd） -->
+                <dl>
+                    <dt class="center1"></dt>
+                    <dd class="center2"><a href="#">中餐专区</a></dd>
+                    <dt class="center3"></dt>
+                    <dd class="center4"><a href="#">饮品专区</a></dd>
+                </dl>
+                 <!-- 新增第三个DL：日料专区（单组dt+dd，可扩展第二组） -->
+                <dl>
+                    <dt class="new-left1"></dt> <!-- 新增日料图片区 -->
+                    <dd class="new-left2"><a href="#">日料专区</a></dd> <!-- 日料文字区 -->
+                    <!-- 如需添加第二组（如“韩料专区”），可复制dt+dd -->
+                    <dt class="new-left3"></dt> <!-- 新增韩料图片区 -->
+    				<dd class="new-left4"><a href="#">韩料专区</a></dd> <!-- 韩料文字区 -->
+                </dl>
+            </div>
+        </section>
+
+        <h2>精品课程 / Featured Courses</h2>
+        
+        <section class="current">
+            <dl>
+                <dt class="match_1"></dt>
+                <dd class="current01">法式烘焙课程</dd>
+                <dd class="current02"><a class="three" href="#">掌握经典西点技艺</a></dd>
+            </dl>
+            <dl>
+                <dt class="match_2"></dt>
+                <dd class="current01">意面料理课程</dd>
+                <dd class="current02"><a class="three" href="#">手作意面全攻略</a></dd>
+            </dl>
+            <dl>
+                <dt class="match_3"></dt>
+                <dd class="current01">日料大师课</dd>
+                <dd class="current02"><a class="three" href="#">寿司之神亲授</a></dd>
+            </dl>
+            <!-- 原分子料理课模块已删除 -->
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>Copyright © 2022-2030 FoodArt.com,All rights reserved.</p>
+        <p>2020-2030,版权所有 美食工坊 食字备 88888888</p>
+    </footer>
+</body>
+</html>

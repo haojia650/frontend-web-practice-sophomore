@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人注册</title>
+  <link href="FakeRegistrationSystem.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>个人注册</h1>
+  </div>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="certType">证件类型:</label>
+        <select id="certType" name="certType" required>
+          <option value="idcard">居民身份证</option>
+          <option value="hk通行证">港澳居民来往内地通行证</option>
+          <option value="tw通行证">台湾居民来往大陆通行证</option>
+          <option value="hk居住证">港澳居民居住证</option>
+          <option value="tw居住证">台湾居民居住证</option>
+          <option value="外国人永久证">外国人永久居留身份证</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">姓名:*</label>
+        <input type="text" id="name" placeholder="请输入姓名" required>
+      </div>
+
+      <div class="form-group">
+        <label for="certNo">证件号码:*</label>
+        <input type="text" id="certNo" placeholder="请输入证件号码" required>
+      </div>
+
+      <div class="form-group">
+        <label for="validStart">证件有效期:*</label>
+        <div style="display: flex; gap: 1rem; flex: 1;">
+          <input type="date" id="validStart" required>
+          <input type="date" id="validEnd" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>有效期类型:*</label>
+        <div class="radio-group" style="flex: 1;">
+          <label><input type="radio" name="validPeriod" value="5" required>五年</label>
+          <label><input type="radio" name="validPeriod" value="10" checked>十年</label>
+          <label><input type="radio" name="validPeriod" value="20">二十年</label>
+          <label><input type="radio" name="validPeriod" value="long">长期</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">手机号码:*</label>
+        <input type="text" id="phone" placeholder="请输入手机号码" pattern="[0-9]{11}" required>
+      </div>
+
+      <div class="form-group captcha-group">
+        <label for="imageCode">图片验证码:*</label>
+        <input type="text" id="imageCode" placeholder="请填写验证码" required>
+        <span style="padding: 0.5rem 1rem; border: 1px solid #e2e8f0; border-radius: 6px;">A3F7</span>
+      </div>
+
+      <div class="form-group captcha-group">
+        <label for="smsCode">短信验证码:*</label>
+        <input type="text" id="smsCode" placeholder="请填写短信验证码" required>
+        <button type="button" id="getSmsCode">获取短信验证码</button>
+      </div>
+
+      <div class="form-group">
+        <label for="password">密码:*</label>
+        <input type="password" id="password" placeholder="8-18位字符，包含字母和数字"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,18}$" required>
+        <div class="password-strength">
+          <span class="strength-btn">弱</span>
+          <span class="strength-btn">中</span>
+          <span class="strength-btn">强</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">确认密码:*</label>
+        <input type="password" id="confirmPassword" placeholder="请再次输入密码" required>
+      </div>
+
+      <div class="agreement-group">
+        <input type="checkbox" id="agreement" required>
+        <label for="agreement">我已阅读并同意《用户服务协议》和《隐私协议》</label>
+      </div>
+
+      <button type="submit" class="submit-btn">立即注册</button>
+    </form>
+  </div>
+</body>
+
+</html>

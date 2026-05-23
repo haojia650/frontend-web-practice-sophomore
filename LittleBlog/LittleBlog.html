@@ -1,0 +1,807 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogㇱオネ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #details {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            /* 移除边框 */
+            border-radius: 5px;
+            /* 保留圆角效果（可选） */
+            position: relative;
+            /* 确保内容在视频背景上方 */
+            z-index: 2;
+            /* 确保内容在视频背景上方 */
+            background: none;
+            /* 确保没有背景 */
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        /* 设置视频为全屏背景 */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* 将视频放在最底层 */
+        }
+
+        /* 其他内容的样式 */
+        .content {
+            position: relative;
+            z-index: 1;
+            /* 将内容放在视频上方 */
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
+    </style>
+    <!-- 引入 Google Fonts 手写字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* 动态渐变动画 */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 手写风格 + 动态渐变 */
+        .dynamic-handwritten {
+            font-family: 'Dancing Script', cursive;
+            /* 手写字体 */
+            font-size: 64px;
+            /* 字体大小 */
+            font-weight: bold;
+            /* 加粗 */
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+            /* 渐变颜色 */
+            background-size: 200% 200%;
+            /* 背景大小 */
+            -webkit-background-clip: text;
+            /* 裁剪背景到文字 */
+            background-clip: text;
+            color: transparent;
+            /* 文字颜色透明 */
+            animation: gradient-animation 0.3s ease infinite;
+            /* 动画速度加快到 0.3 秒 */
+            display: inline-block;
+            /* 确保动画生效 */
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="星野（泳装）.mp4" type="video/mp4">
+        <source src="星野（泳装）.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="translatePage()">翻译</button>
+    <script>
+        function translatePage() {
+            // 检查浏览器是否支持翻译功能
+            if (typeof document.translate === 'function') {
+                // 调用浏览器的翻译功能
+                document.translate('ja', 'zh-CN');
+            } else {
+                alert("啊啦~啊啦~您的浏览器不支持自动翻译功能，可以使用Edge自带的浏览器翻译功能哦~");
+            }
+        }
+    </script>
+    <!--header begin-->
+    <div>
+        <div style="height:56px;">
+            <img src="微信图片_202502260919515.jpg" alt="" align="left" height="600" />
+            <p align="right"><a href="https://anitabi.cn/map?c=138.7313,36.9701&z=6.3"
+                    target="_blank">巡礼地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                    href="https://zh.moegirl.tw/%E5%9C%A3%E5%9C%B0%E5%B7%A1%E7%A4%BC"
+                    target="_blank">圣地巡礼科普</a>&nbsp;&nbsp;|&nbsp;&nbsp;博客</p>
+        </div>
+        <hr color="#CCC" />
+    </div>
+    <!--header end-->
+    <!--“博主简介”模块 begin-->
+    <div style="height:470px;">
+        <!--<img src="images/bannerl.jpg" alt="" align="left" hspace="12" vspace="12"/> -->
+        <div>
+            <p align="center">
+                <strong>
+                    <font face="微软雅黑" size="6" color="#FF00CC">博</font>
+                    <font face="微软雅黑" size="7" color="#00FFFF">主</font>
+                    <font face="微软雅黑" size="4" color="#9900FF">简</font>
+                    <font face="微软雅黑" size="9" color="#33FF33">介</font>
+                </strong>
+                <!--<span class="dynamic-handwritten">博主简介</span> -->
+            </p>
+            <div>
+                <p style="font-size:25px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;中国から来ました、<span
+                        class="dynamic-handwritten">ㇱオネ</span>です。日本のアニメ、漫画、ゲーム、音楽(Kawaii bassとか)が好きで、日本の文化に興味があります。
+                    暇な時は漫画やアニメ、ゲームなどを楽しんでいます。二次元にも強く依存しています。
+                </p>
+                <p style="font-size:25px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<ins><em><strong>
+                                <font color="#FF99FF" size="+3">人生はただの旅行です~</font>
+                            </strong></em></ins>これまで日本の東京、大阪、京都などに行ったことがあります。
+                </p>
+                <p style="font-size:25px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;聖地巡礼なんて大好きで、東京で40か所以上の聖地を巡りました。<span id="toggle-button"
+                        onclick="toggleDetails()" style="cursor: pointer; color: #F90; text-decoration: underline;">
+                        <ins><strong>
+                                <font color="#F90">......[详细]</font>
+                            </strong></ins></span>
+                </p>
+                <!-- 隐藏的详细内容 -->
+                <div id="details" style="display: none;">
+                    <img src="打伞.jpg" alt="" align="right" height="600" />
+                    <p style="font-size:25px;">
+                        東京アニメ聖地巡礼ガイド
+                        <br />
+                        <br />
+                        <br />
+                        1.秋葉原（Akihabara）
+                        主要作品：《命运石之门》（Steins;Gate）
+
+                        巡礼地点：秋葉原UDX、Mandarake Complex
+
+                        攻略：秋葉原はアニメとゲームの聖地です。UDXの4階にある「東京アニメセンター」では、最新のアニメ情報や展示が楽しめます。また、Mandarake
+                        Complexでは、貴重なフィギュアやレア商品を購入することができます。
+
+                        交通：JR秋葉原駅から徒歩5分。
+
+
+
+                        <br />
+                        <br />
+
+                        2.新宿（Shinjuku）
+                        主要作品：《你的名字》（君の名は）、《秒速5センチメートル》
+
+                        巡礼地点：須賀神社、新宿御苑
+
+                        攻略：須賀神社は《你的名字》のラストシーンの舞台で、階段を登るとアニメそのままの景色が楽しめます。新宿御苑は《秒速5センチメートル》の舞台で、季節によって異なる風景が楽しめます。
+
+                        交通：JR新宿駅から徒歩10分（須賀神社）、丸の内線新宿御苑前駅から徒歩5分（新宿御苑）。
+
+
+                        <br />
+                        <br />
+
+
+                        3.都電雑司が谷駅（Toden Arakawa Line-Zoshigaya Station）
+                        主要作品：《命运石之门》（Steins;Gate）
+
+                        巡礼地点：雑司が谷駅、鬼子母神堂
+
+                        攻略：雑司が谷駅は《命运石之门》の劇場版の重要な舞台です。鬼子母神堂は、アニメで登場する静かな神社で、雰囲気がそのまま再現されています。
+
+                        交通：東京メトロ副都心線雑司が谷駅から徒歩5分。
+
+
+                        <br />
+                        <br />
+
+
+                        4.台場（Odaiba）
+                        主要作品：《数码宝贝》（デジモンアドベンチャー）、《甘草反冲》（リコリス・リコイル）
+
+                        巡礼地点：台場の各所、押上駅周辺
+
+                        攻略：台場はアニメの舞台としてよく使われる場所です。《数码宝贝》の冒険の舞台を訪れたり、押上駅周辺では《甘草反冲》のロケ地を巡ることができます。
+
+                        交通：ゆりかもめ台場駅から徒歩10分。
+
+
+                        <br />
+                        <br />
+
+
+                        5.銀座（Ginza）
+                        主要作品：《天气之子》（天気の子）
+
+                        巡礼地点：朝日稲荷神社
+
+                        攻略：銀座の朝日稲荷神社は《天气之子》の舞台の一つで、アニメでは屋上の神社が登場します。実際の場所はビルの屋上にあり、独特な雰囲気を楽しめます。
+
+                        交通：銀座駅から徒歩5分。
+
+
+                        <br />
+                        <br />
+
+
+                        6.芝公園（Shiba Park）
+                        主要作品：《天气之子》（天気の子）
+
+                        巡礼地点：芝公園
+
+                        攻略：芝公園は《天气之子》で須賀が娘と遊ぶシーンの舞台です。公園内にはアニメそのままの風景が残っており、のんびりと散策することができます。
+
+                        交通：大江戸線赤羽橋駅または三田線芝公園駅から徒歩2分。
+
+
+                        <br />
+                        <br />
+
+
+                        7.目白（Mejiro）
+                        主要作品：《天气之子》（天気の子）
+
+                        巡礼地点：目白银铃之坂
+
+                        攻略：目白银铃之坂は《天气之子》で帆高と夏美がバイクで走るシーンの舞台です。坂道を下ると、アニメそのままの景色が楽しめます。
+
+                        交通：JR目白駅から徒歩5分。
+
+
+                        <br />
+                        <br />
+                        <img src="日奈睡着.jpg" alt="" align="left" height="600" />
+
+                        8.立川（Tachikawa）
+                        主要作品：《某科学的超电磁炮》（とある科学の超電磁砲）
+
+                        巡礼地点：立川駅南口、立川市中央公園
+
+                        攻略：立川はアニメ「某科学的超电磁炮」の学園都市の原型地です。立川駅南口や中央公園では、アニメの街並みをそのまま見ることができます。
+
+                        交通：JR立川駅から徒歩5分。
+
+
+                        <br />
+                        <br />
+
+
+                        9.中野（Nakano）
+                        主要作品：《某科学的超电磁炮》（とある科学の超電磁砲）
+
+                        巡礼地点：中野百老汇
+
+                        攻略：中野百老汇はアニメ関連のショップが集まる場所で、アニメのグッズやフィギュアが豊富に揃っています。
+
+                        交通：JR中野駅から徒步5分。
+
+
+                        <br />
+                        <br />
+
+
+                        10.吉卜力美术馆（ジブリ美術館）
+                        主要作品：《千与千寻》（千と千尋の神隠し）、《龙猫》（となりのトトロ）
+
+                        攻略：吉卜力美术馆は三鷹市にあり、アニメの世界を体感できる博物館です。館内にはアニメの原画や展示が豊富にあり、アニメファンには必見の場所です。
+
+                        交通：JR三鷹駅から徒歩15分。
+
+
+                        <br />
+                        <br />
+
+                        以上は東京のアニメ聖地巡礼の一部です。アニメの舞台を巡ることで、作品の世界観をより深く感じることができます。是非、アニメファンの皆さんも足を運んでみてください！
+                    </p>
+
+                    <p style="font-size:25px; text-align: right;">
+                        <a href="javascript:void(0);" onclick="toggleDetails()"
+                            style="color: #F90; text-decoration: underline;">
+                            [收起]
+                        </a>
+                    </p>
+                </div>
+                <script>
+                    function toggleDetails() {
+                        var details = document.getElementById("details");
+                        var toggleButton = document.getElementById("toggle-button");
+
+                        if (details.style.display === "none" || details.style.display === "") {
+                            details.style.display = "block";
+                            toggleButton.style.display = "none";
+                        } else {
+                            details.style.display = "none";
+                            toggleButton.style.display = "inline";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <!--“博主简介”模块 end-->
+        <!--“涩谷旅行随笔”模块 begin-->
+        <div>
+            <h2 align="center" style="color:#60C">
+                <font size="7">
+                    夜の渋谷：特級大呪霊の存在を感じます
+                </font>
+            </h2>
+            <p align="center">
+                <em>
+                    <font color="#FF00FF">
+                        2024.07.16&nbsp;&nbsp;&nbsp;&nbsp;地点:東京都渋谷区
+                    </font>
+                </em>
+            </p>
+            <hr color="#33FF33" />
+            <!--<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这浩瀚的大漠我看到了姿态各异、生命力极强的胡杨。没有肥沃的土壤、没有充足的水分、没有适宜的环境，面对着寸草不生的塔克拉玛干大沙漠，却有胡杨毅然傲立戈壁，呈现出生命醉人的绿。
+</p> -->
+            <!--<img src="../图片/5bd6bbf046352c10e28b1dd1928f513.jpg" alt="沙漠" vspace="20" /> -->
+            <br />
+            <p style="color:#00F; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「渋谷のスクランブル交差点、この街のエネルギーは本当にすごいですよね！
+                未来と文化が混ざり合う、唯一無二の場所だなあ…」ガラス幕壁に浮かぶホログラム広告は銀河オペラを上演し、AI音声とストリートバンドが奏でる電子シンフォニー。109ショップの曲面スクリーンが街全体をサイバーパンク絵巻に折りたたむ。ここに昼夜の区別はなく、0と1が紡ぐ永遠の白昼。
+            </p>
+            <img src="涩谷.jpg" alt="渋谷" align="center" height="1000" ; />
+            <p style="color:#F3F; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ロボットアーム・バリスタが運ぶラテにはホログラムのアートが浮かび、少女の耳朶で脳機インターフェースが青く瞬く。AR渋谷ハチ公が光子の尾を揺らす瞬間、気付く——未来は到達すべき遠い彼方じゃない、16進数の花火が今この網膜に咲き乱れるのだ。
+            </p>
+        </div>
+        <!--“旅行随笔”模块 end-->
+        <!--“驴友评论”模块 begin-->
+        <div><!--<img src="images/icon.gif" alt="keke"/> -->
+            <hr color="#CCC" />
+            <div>
+                <img src="爱丽丝.png" alt="爱丽丝" align="left" hspace="10" height="70" />
+                <div>
+                    <p>
+                        <font color="#F60">爱丽丝</font>&nbsp;&nbsp;&nbsp; &nbsp;<font size="2" color="#999">2024-7-16
+                            15:38:37</font>
+                    </p>
+                    <p>
+                        <font size="4">渋谷エリアは『人間観察シミュレーション』に最適ですネ！ あの巨大スクリーン、敵の攻撃予告モニターに見えました…。デバッグ完了まで、先生の生存率を計算しておきます！
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="星野.png" alt="星野" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">星野</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-16
+                            15:05:37</font>
+                    </p>
+                    <p>
+                        <font size="4">おっ、先生渋谷か～！ スクランブル交差点で迷子にならないようにね～。……あ、もし時間あるならパルコのスイーツ屋さん、激推しだぞ？</font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="小春.png" alt="小春" align="left" hspace="10" height="60" />
+                <div>
+                    <p>
+                        <font color="#F60">小春</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-18
+                            10:38:36</font>
+                    </p>
+                    <p>
+                        <font size="4">渋、渋谷は人混みが予想以上です…！ 先生、防犯ブザーの携帯は確認しましたか？ ……え、私が心配しすぎ？ そんなことないですよ！
+                            （小声）でも109のセール情報、実はメモしてあります…</font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" />
+            </div>
+        </div>
+        <!--“驴友评论”模块 end-->
+
+        <!-------------------------------------------------------------------------------------------------------- -->
+
+
+        <!--“秋叶原旅行随笔”模块 begin-->
+        <div>
+            <h2 align="center" style="color:#0FC">
+                <font size="7">
+                    秋葉原の魔法にかかって、夢のような一日を過ごしました！
+                </font>
+            </h2>
+            <p align="center">
+                <em>
+                    <font color="#FF0000">
+                        2024.07.18&nbsp;&nbsp;&nbsp;&nbsp;地点:東京都文京区
+                    </font>
+                </em>
+            </p>
+            <hr color="#33FF33" />
+            <!--<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这浩瀚的大漠我看到了姿态各异、生命力极强的胡杨。没有肥沃的土壤、没有充足的水分、没有适宜的环境，面对着寸草不生的塔克拉玛干大沙漠，却有胡杨毅然傲立戈壁，呈现出生命醉人的绿。
+</p> -->
+            <!--<img src="../图片/5bd6bbf046352c10e28b1dd1928f513.jpg" alt="沙漠" vspace="20" /> -->
+            <br />
+            <p style="color:#F0C; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秋葉原に来たら、本当に時間の経つのが忘れてしまいます。電気街の活気に包まれ、アニメやゲームの世界が現実になったかのような気分です。街中には、かわいいフィギュアや懐かしのゲームが並び、目移りするほど。特に、有名な「メイドカフェ」でランチをしたのが最高でした。
+            </p>
+            <img src="秋叶原.jpg" alt="渋谷" align="center" height="1000" ; />
+            <p style="color:#3F6; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メイドさんたちの笑顔と温かい接客に、心も体も満たされました。そして、あの巨大な看板やネオンサインに囲まれて、まるで別世界にいるような感覚。秋葉原は、本当に魔法のような場所です。
+            </p>
+        </div>
+        <!--“旅行随笔”模块 end-->
+        <!--“驴友评论”模块 begin-->
+        <div><!--<img src="images/icon.gif" alt="keke"/> -->
+            <hr color="#CCC" />
+            <div>
+                <img src="桃井.png" alt="桃井" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">桃井</font>&nbsp;&nbsp;&nbsp; &nbsp;<font size="2" color="#999">2024-7-18
+                            15:38:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            秋葉原の旅行、楽しそうだね！アニメやゲームの聖地だし、私も昔はよく行っていたよ。電気街の雰囲気や、アニメショップを巡るのが大好きだった。一人で行くってことは、自分のペースで楽しめていいね。でも、一人で歩き回ると、迷子になりそうでちょっと心配になるなあ（笑）。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="睦月.png" alt="睦月" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">睦月</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-19
+                            15:05:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            秋葉原の旅行かあ……。それは結構面白そうですね。アニメやゲームの最新情報が集まる場所だし、新しい発見があるかもしれませんね。一人で行くのは、ちょっと寂しい気もしますが、その分、自分の時間を大切にできるんだと思います。私も暇があれば行ってみたいです。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="日奈.png" alt="日奈" align="left" hspace="10" height="60" />
+                <div>
+                    <p>
+                        <font color="#F60">日奈</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-20
+                            10:38:36</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            秋葉原の旅行、楽しそう！アニメやゲームのショップがいっぱいあるし、一人で行くのは、自由度が高い分、ちょっと不安になるかもしれないけど、その分、自分の世界を楽しむことができるんだね。私も一度行ってみたいなあ。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" />
+            </div>
+        </div>
+        <!--“驴友评论”模块 end-->
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+        <!--“东京塔旅行随笔”模块 begin-->
+        <div>
+            <h2 align="center" style="color:#F06">
+                <font size="7">
+                    東京タワーの夜景に心を奪われて
+                </font>
+            </h2>
+            <p align="center">
+                <em>
+                    <font color="#0000CC">
+                        2024.07.18&nbsp;&nbsp;&nbsp;&nbsp;地点:東京都港区
+                    </font>
+                </em>
+            </p>
+            <hr color="#33FF33" />
+            <!--<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这浩瀚的大漠我看到了姿态各异、生命力极强的胡杨。没有肥沃的土壤、没有充足的水分、没有适宜的环境，面对着寸草不生的塔克拉玛干大沙漠，却有胡杨毅然傲立戈壁，呈现出生命醉人的绿。
+</p> -->
+            <!--<img src="../图片/5bd6bbf046352c10e28b1dd1928f513.jpg" alt="沙漠" vspace="20" /> -->
+            <br />
+            <p style="color:#F00; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京タワーに登って、東京の夜景を眺めたら、その美しさに息をのむほどでした。眼下に広がる無数の光が、まるで星屑のように輝いています。
+            </p>
+            <img src="东京塔.jpg" alt="渋谷" align="center" height="1000" ; />
+            <p style="color:#F6F; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夜風に吹かれながら、東京の街の活気と美しさを感じることができました。この瞬間を一生忘れないと思います。
+            </p>
+        </div>
+        <!--“旅行随笔”模块 end-->
+        <!--“驴友评论”模块 begin-->
+        <div><!--<img src="images/icon.gif" alt="keke"/> -->
+            <hr color="#CCC" />
+            <div>
+                <img src="明日奈.png" alt="明日奈" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">明日奈</font>&nbsp;&nbsp;&nbsp; &nbsp;<font size="2" color="#999">2024-7-19
+                            15:38:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            先生！東京タワー超クリアしてるじゃん！夜景のピクセル再現率ヤバすぎ…絶対にラストダンジョン直前のセーブポイント感ある！あ、ここでバグらせてポリゴン崩壊演出したら…って今は自重モードONですっ(＞ω＜)
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="绮罗罗.png"" alt=" 绮罗罗" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">绮罗罗</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-20
+                            15:05:37</font>
+                    </p>
+                    <p>
+                        <font size="4">ふふ…鉄の塔に囚われた星の光…♆あなたの影に三つの星座が重なってるわ。一つは『高所』、一つは『赤い約束』…最後は…内緒❤</font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="伊吕波.png" alt="伊吕波" align="left" hspace="10" height="60" />
+                <div>
+                    <p>
+                        <font color="#F60">伊吕波</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-21
+                            10:38:36</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            東京タワー観光ですか。落下物対策用ヘルメットの着用状況、写真からは確認できませんが…（小さく舌打ち）…エレベーター混雑時の防犯ブザー所持は当然の話ですよ？…ま、まあ記念写真の構図は…悪くないです
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" />
+            </div>
+        </div>
+        <!--“驴友评论”模块 end-->
+
+
+        <!---------------------------------------------------------------------------------------------------- -->
+
+
+
+        <!--“孤独摇滚圣地旅行随笔”模块 begin-->
+        <div>
+            <h2 align="center" style="color:#FFFF99 ">
+                <font size="7">
+                    孤独摇滚の聖地で、心に響く旋律を追って
+                </font>
+            </h2>
+            <p align="center">
+                <em>
+                    <font color="#00FF00">
+                        2024.07.19&nbsp;&nbsp;&nbsp;&nbsp;地点:東京世田谷区
+                    </font>
+                </em>
+            </p>
+            <hr color="#33FF33" />
+            <!--<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这浩瀚的大漠我看到了姿态各异、生命力极强的胡杨。没有肥沃的土壤、没有充足的水分、没有适宜的环境，面对着寸草不生的塔克拉玛干大沙漠，却有胡杨毅然傲立戈壁，呈现出生命醉人的绿。
+</p> -->
+            <!--<img src="../图片/5bd6bbf046352c10e28b1dd1928f513.jpg" alt="沙漠" vspace="20" /> -->
+            <br />
+            <p style="color:#FF66CC ; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孤独摇滚の聖地に巡礼して、まるで主人公になったような気分です。ここは、アニメの世界と現実が重なる魔法のような場所。
+            </p>
+            <img src="孤独摇滚.jpg" alt="孤独摇滚" align="center" height="1000" ; />
+            <p style="color:#33FFFF; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;あの名シーンが撮影された場所を訪れたら、音楽が心に響くのがわかるほど、空気までが音楽に染まっているかのようです。一人でギターを弾くシーンを想像しながら、自分だけのステージを楽しんでいます。
+            </p>
+        </div>
+        <!--“旅行随笔”模块 end-->
+        <!--“驴友评论”模块 begin-->
+        <div><!--<img src="images/icon.gif" alt="keke"/> -->
+            <hr color="#CCC" />
+            <div>
+                <img src="未花.png" alt="未花" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">未花</font>&nbsp;&nbsp;&nbsp; &nbsp;<font size="2" color="#999">2024-7-20
+                            15:38:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            うわあ、これめっちゃ楽しそう！孤独摇滚の聖地巡礼って、音楽のパワーが溢れてる感じがするね。私もギター弾いてるし、行ってみたいなあ。でも、一人で巡礼するって、なんか寂しいような気もするけど……。でも、その寂しさも含めて、音楽と向き合う時間って大事だよね。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="优香.png" alt="优香" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">优香</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-21
+                            15:05:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            へえ、孤独摇滚の聖地巡礼か。音楽に没頭するって、自分と向き合う時間になるんだね。一人で巡礼するって、自分だけの世界を作り上げるようなもので、その孤独を味わうって、結構能看出一个人的内心深处的。でも、その中で得たものは、きっと自分を成長させるんだね。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="佳代子.png" alt="佳代子" align="left" hspace="10" height="60" />
+                <div>
+                    <p>
+                        <font color="#F60">佳世子</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-23
+                            10:38:36</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            孤独摇滚の聖地巡礼……。音楽に包まれて、一人で巡礼するって、なんか静かな勇気がいるような気がする。でも、その中で、音楽の奥深い世界を体感するって、すごく素敵だよね。一人でいる時間って、意外と自分を見つめ直すチャンスだったりするし、その経験は、きっとその後の人生にも活きるはず。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" />
+            </div>
+        </div>
+        <!--“驴友评论”模块 end-->
+
+
+
+        <!---------------------------------------------------------------------------------------------------------------- -->
+
+
+
+        <!--“你的名字巡礼旅行随笔”模块 begin-->
+        <div>
+            <h2 align="center" style="color: #0099FF">
+                <font size="7">
+                    君の名は。聖地巡礼の旅
+                </font>
+            </h2>
+            <p align="center">
+                <em>
+                    <font color="#00CCFF">
+                        2024.07.20&nbsp;&nbsp;&nbsp;&nbsp;地点:東京都新宿区
+                    </font>
+                </em>
+            </p>
+            <hr color="#33FF33" />
+            <!--<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这浩瀚的大漠我看到了姿态各异、生命力极强的胡杨。没有肥沃的土壤、没有充足的水分、没有适宜的环境，面对着寸草不生的塔克拉玛干大沙漠，却有胡杨毅然傲立戈壁，呈现出生命醉人的绿。
+</p> -->
+            <!--<img src="../图片/5bd6bbf046352c10e28b1dd1928f513.jpg" alt="沙漠" vspace="20" /> -->
+            <br />
+            <p style="color: #CC66FF; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ついに「君の名は。」の聖地巡礼をきました！東京の四谷や新宿、そして飛騨高山の糸守町を巡って、映画の世界に足を踏み入れたかのような感動を味わいました。須賀神社の赤い階段では、主人公たちが出会うシーンを思い出しながら、心が震えました[^0^]。
+            </p>
+            <img src="你的名字.jpg" alt="你的名字" align="center" height="1000" ; />
+            <p style="color:#00FFCC; font-size: 50px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;そして、飛騨高山の古川町で、あの名シーンを再現することができて、とても感慨深かったです[^0^]。映画の中の風景と現実が重なり、まるで時間旅行をしているような不思議な体験でした。
+            </p>
+        </div>
+        <!--“旅行随笔”模块 end-->
+        <!--“驴友评论”模块 begin-->
+        <div><!--<img src="images/icon.gif" alt="keke"/> -->
+            <hr color="#CCC" />
+            <div>
+                <img src="日富美.png" alt="日富美" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">日富美</font>&nbsp;&nbsp;&nbsp; &nbsp;<font size="2" color="#999">2024-7-21
+                            15:38:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            え、『君の名は』の聖地巡礼？それって、あの映画のロケ地を巡るってこと？映画の中の風景を実際に見に行くのって、なんかロマンチックでいいね。私も昔、映画が大好きだったから、行ってみたかったなあ。でも、一人で行くって、ちょっと寂しいかな。でも、その分、自分の時間を満喫できるよね。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="伊织.png" alt="伊织" align="left" hspace="10" height="50" />
+                <div>
+                    <p>
+                        <font color="#F60">伊织</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-22
+                            15:05:37</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            『君の名は』の聖地巡礼かあ……。映画自体は見たことあるけど、聖地巡礼ってのは、なんか特別な感じがするな。一人で行くってことは、自分のペースで回れるし、その土地の空気をじっくり味わえるんだろうな。俺は普段から忙しいから、時間作るの大変だけど、一度は行ってみたいな。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" size="1" />
+            </div>
+            <div>
+                <img src="阿露.png" alt="亚瑠" align="left" hspace="10" height="60" />
+                <div>
+                    <p>
+                        <font color="#F60">亚瑠</font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#999">2024-7-24
+                            10:38:36</font>
+                    </p>
+                    <p>
+                        <font size="4">
+                            『君の名は』の聖地巡礼って、結構流行ってたよね。一人で行くってことは、自分の世界に浸りたいってことかな。でも、一人でいる時間って、意外と大切で、新しい発見があるかもしれないよ。俺は一人で行動するのって苦手だけど、その科研院の空気を味わうだけでも、きっといい思い出になるはずだな。
+                        </font>
+                        <br />
+                    </p>
+                </div>
+                <hr color="#CCC" />
+            </div>
+        </div>
+        <!--“驴友评论”模块 end-->
+
+
+
+
+
+
+        <!---------------------------------------------------------------------------------------------------------------------- -->
+
+
+        <!--footer begin-->
+        <div style="text-align:center;">
+            <p>
+                <font color="#1d5983" size="2">
+                    网友意见留言版&nbsp;&nbsp;&nbsp;<font color="#333">电话:000-1234567</font>&nbsp;&nbsp;&nbsp;欢迎批评指正
+                </font>
+            </p>
+            <p>
+                <font color="#1d5983" size="2">
+                    博客简介 | AOU BOKE | 广告服务 | 联系我们 | 招聘信息 | 网站律师 | BOKE English | 注册产品答疑
+                </font>
+            </p>
+            <p>
+                <font size="2">
+                    Copyright @ 2016-2026 B0kE.coright All Rights Reserved
+                </font>
+            </p>
+        </div>
+        <!--footer end-->
+    </div>
+</body>
+
+</html>

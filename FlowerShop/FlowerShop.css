@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            width: 980px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Verdana, Geneva, sans-serif;
+            color:#3FC;
+        }
+
+        .header h1 {
+            font-weight: normal;
+        }
+
+        .header strong {
+            font-weight: normal;
+            font-size: 60px;
+        }
+
+        .header em {
+            font-style: normal;
+            font-size: 25px;
+        }
+
+        .fenlei {
+            width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .fenlei h2 {
+            font-size: 18px;
+            font-family: "微软雅黑", "Microsoft YaHei";
+            color: #a5a5a5;
+            height: 42px;
+            line-height: 42px;
+            text-align: left;
+        }
+
+        .fenlei p {
+            line-height: 50px;
+            font-size: 40px;
+            text-align: left;
+			color:#C0F;
+        }
+
+        .bestseller {
+            width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bestseller .txt {
+            line-height: 50px;
+			font-size:30px;
+            text-indent: 2em;
+            text-align: left;
+			color:#F0F;
+        }
+
+        .bestseller .txt em {
+            font-style: normal;
+            text-decoration: underline;
+			color:#F00;
+        }
+
+        .shouhou {
+            width: 980px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: "微软雅黑", "Microsoft YaHei";
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .boss {
+            width: 980px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .boss h3 {
+            height: 30px;
+            line-height: 30px;
+            font-family: "微软雅黑";
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .boss p {
+            font-style: italic;
+            line-height: 26px;
+            font-size: 14px;
+        }
+
+        .boss img {
+            float: left;
+            margin-right: 20px;
+        }
+		 /* 设置视频为全屏背景 */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* 将视频放在最底层 */
+        }
+
+        /* 其他内容的样式 */
+        .content {
+            position: relative;
+            z-index: 1; /* 将内容放在视频上方 */
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
+		/* 新增视频容器样式 */
+        .video-container {
+            width: 1300px;
+            margin: 20px auto;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }

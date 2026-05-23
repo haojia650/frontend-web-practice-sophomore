@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>奇普托斯学生注册系统</title>
+  <link href="0.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 全屏背景视频 -->
+  <video class="fullscreen-bg-video" autoplay muted loop>
+    <source src="【ブルアカ】5th PV - 8K.mp4" type="video/mp4">
+    <source src="【ブルアカ】5th PV - 8K.webm" type="video/webm">
+    你的浏览器不支持视频播放
+  </video>
+  <div class="content-wrapper">
+    <div class="header">
+      <div class="header-inner">
+        <div class="logo-area">
+          <div class="logo-icon"></div>
+          <img class="main-logo" src="logo.png" alt="Logo">
+        </div>
+        <div class="slogan">Join the Kivotos Academic Federation</div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <ul>
+        <li><a href="https://www.gamekee.com/ba">首页</a></li>
+        <li><a href="https://www.gamekee.com/ba/second/23941">学生图鉴</a></li>
+        <li><a href="https://www.gamekee.com/ba/kachi/15">卡池up</a></li>
+        <li><a href="https://www.gamekee.com/ba/second/51508">官方漫画</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="section account-choice">
+        <h2>&nbsp;&nbsp;账号操作选择</h2>
+        <div class="form-row">
+          <label>是否已有账号：</label>
+          <div class="input-box">
+            <label>
+              <input type="radio" name="accountStatus" value="login" checked onchange="toggleForm(this)" />
+              <span style="display: inline-flex; align-items: center; gap: 6px;">
+                <img src="" alt="" style="width: 18px;"> 有账号，直接登录
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="accountStatus" value="register" onchange="toggleForm(this)" />
+              <span style="display: inline-flex; align-items: center; gap: 6px;">
+                <img src="" alt="" style="width: 18px;"> 没有账号，立即注册
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 登录表单（完整移植第一个的结构和样式） -->
+      <div class="login-section" id="loginSection">
+        <h3 class="login-title">
+          账号登录 <span>(Account Login)</span>
+        </h3>
+        <div class="form-group">
+          <div class="form-row name">
+            <input type="text" placeholder="登录账号 (Account)" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row email">
+            <input type="password" placeholder="登录密码 (Password)" required>
+          </div>
+        </div>
+        <div class="form-row btn-group">
+          <button class="btn" type="button">登录 (Login)</button>
+          <a href="GetPasswordBack.html" class="btn-forget" type="button">忘记密码</a>
+        </div>
+      </div>
+
+      <!-- 注册表单（保持第二个的原始内容，未修改） -->
+      <div class="register-section hide" id="registerSection">
+        <h3><img src="" alt="">用户注册</h3>
+        <div class="form-row">
+          <label>注册方式：</label>
+          <div class="input-box">
+            <label>
+              <input type="radio" name="regMethod" value="email" checked onchange="switchRegMethod(this)" />
+              <span style="display: inline-flex; align-items: center; gap: 6px;">
+                <img src="email.png" alt="邮箱图标" style="width: 18px;"> 邮箱注册
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="regMethod" value="phone" onchange="switchRegMethod(this)" />
+              <span style="display: inline-flex; align-items: center; gap: 6px;">
+                <img src="phone.png" alt="手机图标" style="width: 18px;"> 手机注册
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row" id="emailRegRow">
+          <label>注册邮箱：</label>
+          <div class="input-box">
+            <input type="email" placeholder="请输入有效邮箱" required>
+          </div>
+        </div>
+
+        <div class="form-row hide" id="phoneRegRow">
+          <label>注册手机：</label>
+          <div class="input-box">
+            <input type="tel" placeholder="请输入11位手机号码" pattern="[0-9]{11}" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>登录密码：</label>
+          <div class="input-box">
+            <input type="password" placeholder="密码需8-16位" minlength="8" maxlength="16" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>确认密码：</label>
+          <div class="input-box">
+            <input type="password" placeholder="请再次输入密码" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>学园昵称：</label>
+          <div class="input-box">
+            <input type="text" placeholder="请输入你的学园昵称" required>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3><img src="do.png" alt="">您的学园信息：</h3>
+          <div class="form-row">
+            <label>所在学园：</label>
+            <div class="input-box">
+              <select id="schoolSelect" required>
+                <option value="">-请选择你的学园-</option>
+                <option value="abydos">阿拜多斯高中</option>
+                <option value="gehenna">格黑娜学院</option>
+                <option value="sanyo">三一综合学园</option>
+                <option value="millennium">千年科学学校</option>
+                <option value="byakko">百鬼夜行学园</option>
+                <option value="shanhaijing">山海经学园</option>
+                <option value="arius">阿里乌斯教派</option>
+                <option value="ak冬">赤冬学园</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row" id="clubSection">
+            <label>所属社团：</label>
+            <div class="input-box" id="clubContainer">
+              <p style="color: #666; font-size: 14px; margin-top: 8px;">请先选择所在学园以显示对应社团</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>性别：</label>
+            <div class="input-box">
+              <label><input type="radio" name="sex" /> 男</label>
+              <label><input type="radio" name="sex" /> 女</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>战斗类型：</label>
+            <div class="input-box">
+              <select required>
+                <option value="">-请选择战斗属性-</option>
+                <option value="explosive">爆炸型</option>
+                <option value="penetrative">贯穿型</option>
+                <option value="mystic">神秘型</option>
+                <option value="shock">振动型</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>防御类型：</label>
+            <div class="input-box">
+              <select required>
+                <option value="">-请选择防御属性-</option>
+                <option value="light">轻装甲</option>
+                <option value="heavy">重装甲</option>
+                <option value="special">特殊装甲</option>
+                <option value="elastic">弹力装甲</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>兴趣爱好：</label>
+            <div class="input-box">
+              <label><input type="checkbox" /> 战术推演</label>
+              <label><input type="checkbox" /> 武器保养</label>
+              <label><input type="checkbox" /> 社团活动</label>
+              <label><input type="checkbox" /> 学园探险</label>
+              <label><input type="checkbox" /> 料理制作</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>自我介绍：</label>
+            <div class="input-box">
+              <textarea placeholder="请简要介绍你的学园经历（200字以内）" maxlength="200"></textarea>
+            </div>
+          </div>
+
+          <button class="btn" type="submit">完成注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 表单切换函数
+    function toggleForm(radio) {
+      const loginSection = document.getElementById('loginSection');
+      const registerSection = document.getElementById('registerSection');
+
+      if (radio.value === 'login') {
+        loginSection.classList.remove('hide');
+        registerSection.classList.add('hide');
+      } else {
+        loginSection.classList.add('hide');
+        registerSection.classList.remove('hide');
+        switchRegMethod(document.querySelector('input[name="regMethod"]:checked'));
+      }
+    }
+
+    // 注册方式切换函数
+    function switchRegMethod(radio) {
+      const emailRow = document.getElementById('emailRegRow');
+      const phoneRow = document.getElementById('phoneRegRow');
+
+      if (radio.value === 'email') {
+        emailRow.classList.remove('hide');
+        phoneRow.classList.add('hide');
+      } else {
+        emailRow.classList.add('hide');
+        phoneRow.classList.remove('hide');
+      }
+    }
+
+    // 学园与社团对应关系数据库
+    const schoolClubDatabase = {
+      abydos: ["自警团", "生存部", "料理研究部", "园艺社", "图书委员会"],
+      gehenna: ["学生会", "纪律委员会", "竞技部", "辩论社", "艺术团"],
+      sanyo: ["茶道部", "弓道部", "合唱部", "书法社", "天文观测会"],
+      millennium: ["科学部", "机器人研究社", "黑客小组", "量子物理学会", "未来技术研究会"],
+      byakko: ["忍者团", "巫女社", "居合道部", "妖怪退治会", "神乐舞组"],
+      shanhaijing: ["咒术研究会", "妖怪使役部", "风水研究组", "古籍修复社", "符文学派"],
+      arius: ["祈祷团", "教义研究部", "医疗班", "圣歌队", "遗迹探索组"],
+      ak冬: ["战术对策委员会", "雪地生存部", "冰上竞技社", "寒冬文学社", "极光观测会"]
+    };
+
+    // 动态渲染社团选择组件
+    function renderClubOptions(selectedSchool) {
+      const clubContainer = document.getElementById("clubContainer");
+      clubContainer.innerHTML = "";
+      if (selectedSchool && schoolClubDatabase[selectedSchool]) {
+        schoolClubDatabase[selectedSchool].forEach(clubName => {
+          clubContainer.innerHTML += `
+            <label style="display: inline-flex; align-items: center; gap: 6px;">
+              <input type="radio" name="club" value="${clubName}" /> ${clubName}
+            </label>
+          `;
+        });
+      } else {
+        clubContainer.innerHTML = "<p style='color: #666;'>请先选择所在学园以加载对应的社团列表</p>";
+      }
+    }
+
+    // 学园选择事件监听
+    document.getElementById("schoolSelect").addEventListener("change", function (e) {
+      renderClubOptions(e.target.value);
+    });
+
+    // 页面初始化
+    window.addEventListener("load", function () {
+      toggleForm(document.querySelector('input[name="accountStatus"]:checked'));
+      renderClubOptions("");
+    });
+  </script>
+</body>
+
+</html>

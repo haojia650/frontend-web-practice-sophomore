@@ -1,0 +1,426 @@
+ * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      outline: none;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "微软雅黑";
+      background: #ffffff;
+    }
+
+    .header {
+      background: rgba(72, 118, 255, 0.7);
+      padding: 30px 0;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      height: 60px;
+      background: url('https://via.placeholder.com/50x50/FFF/4876FF?text=✨') no-repeat center;
+      background-size: 80%;
+    }
+
+    .main-logo {
+      height: 60px;
+    }
+
+    .slogan {
+      color: white;
+      font-size: 16px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .nav {
+      background: rgba(72, 118, 255, 0.7);
+      padding: 20px 0;
+      box-shadow: 0 4px 15px rgba(72, 118, 255, 0.15);
+    }
+
+    .nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .nav ul li {
+      position: relative;
+    }
+
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 25px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    .nav ul li a::before {
+      content: ""; /* 清空原样式 */
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: white;
+      margin-right: 8px;
+      font-variant-emoji: emoji;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav ul li:first-child a::before { content: "🏠"; }
+    .nav ul li:nth-child(2) a::before { content: "📔"; }
+    .nav ul li:nth-child(3) a::before { content: "😍"; }
+    .nav ul li:nth-child(4) a::before { content: "📚"; }
+
+    .nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ff69b4;
+    }
+
+    .banner {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    .banner-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保持图片比例并覆盖整个容器 */
+      z-index: -1;
+    }
+
+    .banner-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .banner-title-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 80%;
+      height: auto;
+      opacity: 0.95;
+      background: url("https://via.placeholder.com/1000x500/FFF/4876FF?text=✨") no-repeat center;
+      background-size: contain;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /*.section {*/
+    /*  margin: 40px 0;*/
+    /*  padding: 30px 40px;*/
+    /*  border-radius: 25px;*/
+    /*  !* 原背景色删除，改为通过 account-choice 单独控制 *!*/
+    /*  box-shadow: 0 6px 20px rgba(72, 118, 255, 0.1); !* 其他 section 保持原有阴影，新增的 account-choice 会覆盖 *!*/
+    /*}*/
+
+    /* 新增：账号操作选择区域的半透明粉色样式 */
+    .section.account-choice {
+      background-color: rgba(255, 105, 180, 0.8); /* 粉色半透明背景 */
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.15); /* 粉色阴影 */
+    }
+
+    .section h3 {
+      color: #dc2be2;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section h3 img {
+      width: 28px;
+      height: 28px;
+      background: url("https://via.placeholder.com/28x28/FFF/4876FF?text=✨") no-repeat center;
+      background-size: contain;
+    }
+
+    .form-row {
+      margin: 20px 0;
+      display: flex;
+      align-items: start;
+    }
+
+    .form-row label {
+      width: 140px;
+      text-align: right;
+      color: #4800fd;
+      margin-right: 15px;
+      line-height: 32px;
+      font-size: 15px;
+    }
+
+    .input-box {
+      flex: 1;
+    }
+
+    .input-box input,
+    .input-box select,
+    .input-box textarea {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #ffd7e0;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .input-box input:focus,
+    .input-box select:focus,
+    .input-box textarea:focus {
+      border-color: #ff69b4;
+    }
+
+    .input-box textarea {
+      height: 120px;
+      resize: vertical;
+      border-radius: 15px;
+    }
+
+    .input-box input[type="radio"],
+    .input-box input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ffb6c1;
+      margin-right: 8px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      height: 55px;
+      background: linear-gradient(45deg, #ff69b4, #ba55d3);
+      color: white;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .login-section,
+    .register-section {
+      margin: 0;
+    }
+
+    .fullscreen-bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+
+    /* 新增：账号操作选择区域的半透明粉色样式（含圆角） */
+    .section.account-choice {
+      background-color: rgba(255, 105, 180, 0.8); /* 粉色半透明背景 */
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.15); /* 粉色阴影 */
+      border-radius: 25px; /* 25px 圆角边框，与页面统一 */
+    }
+
+    /* ------------------- 第一个登录表单的专属CSS ------------------- */
+    .login-title {
+      font-size: 32px;        /* 大字号突出 */
+      font-weight: 600;      /* 半加粗增强存在感 */
+      color: #3891f3;        /* 主色：明亮的天蓝色，饱和度高 */
+    }
+    .login-title span {
+      color: #60a5fa;        /* 英文用更浅的同色系蓝，渐变感 */
+      font-weight: 500;      /* 英文稍细，区分层次 */
+      margin-left: 8px;      /* 间距 */
+    }
+
+    .form-row.name::before {
+      content: "";
+      width: 30px;
+      height: 50px;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.481-.408-.578V13h.548c.408-.097.659-.265.659-.572V8.717c0-.253-.225-.455-.5-.5l-2.5-1.5V5h3.5a.5.5 0 0 1 .5.5v1.616l-2.1-1.26A.5.5 0 0 1 5 5v-.585l1.462.876A.5.5 0 0 1 7 6.5v8.216c0 .481.438.659.936.659H9c.481 0 .936-.178.936-.659V9.283l-1.688 1.013a.5.5 0 0 1-.528.006l-2.65-1.59a.5.5 0 0 1-.408-.578h.002z"/></svg>');
+    }
+
+    .form-row.email::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>');
+    }
+
+    .form-group {
+      margin: 15px 0;
+    }
+
+    .form-row.btn-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-forget {
+      background: white;
+      color: #ff69b4;
+      border: 2px solid #ff69b4; /* 加粗边框 */
+      width: 60%;
+      border-radius: 4px;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      height: 55px;
+      line-height: 55px;
+      padding: 0;
+      text-align: center;
+      box-sizing: border-box;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    /* ------------------- 第一个登录表单的专属CSS 结束 ------------------- */
+    /* 登录表单容器 */
+    .login-section {
+      padding: 30px 40px;
+      border-radius: 25px;
+      box-shadow: 0 6px 20px rgba(72, 118, 255, 0.1);
+    }
+
+    /* 输入框组样式（带图标） */
+    .form-row.name,
+    .form-row.email {
+      height: 50px;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .form-row.name input,
+    .form-row.email input {
+      flex: 1;
+      padding: 0 15px 0 45px; /* 左侧预留图标空间 */
+      background: transparent;
+      font-size: 16px;
+    }
+
+    /* 按钮组最终对齐样式 */
+    .form-row.btn-group {
+      margin-top: 30px; /* 保持与表单内容的间距 */
+    }
+
+    .btn, .btn-forget {
+      /* 核心对齐属性 */
+      display: inline-flex; /* 关键：改为flex布局 */
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0; /* 禁止压缩变形 */
+      width: 48%; /* 各占48%宽度，留2%间隙 */
+
+      /* 高度与行高统一 */
+      height: 55px;
+      line-height: 1; /* 重置行高，避免基线偏移 */
+
+      /* 原有样式保留（颜色等不变） */
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    /* 登录按钮原有样式（补充修正） */
+    .btn {
+      background: linear-gradient(45deg, #ff69b4, #ba55d3);
+      color: white;
+      border-radius: 30px;
+      margin-top: 0; /* 移除原有的margin */
+    }
+
+    /* 忘记密码按钮修正（与登录按钮对齐） */
+    .btn-forget {
+      border: 2px solid #ff69b4; /* 边框粗细与登录按钮视觉平衡 */
+      border-radius: 30px; /* 关键：统一圆角！之前是4px导致视觉错位 */
+      color: #ff69b4;
+      background: white;
+      font-weight: 500;
+    }
+
+    /* 可选：悬停时的轻微位移效果（增强对齐感） */
+    .btn:hover, .btn-forget:hover {
+      transform: translateY(-1px);
+    }
+
+    /* 登录表单输入框背景不透明 */
+    .login-section .form-row.name,
+    .login-section .form-row.email {
+      background-color: white; /* 设置白色不透明背景 */
+      border: 1px solid #ffd7e0; /* 保持原有边框样式 */
+      border-radius: 25px; /* 保持原有圆角 */
+    }
+
+    .login-section .form-row.name input,
+    .login-section .form-row.email input {
+      background-color: transparent; /* 输入框内背景透明，不影响外层背景 */
+      border: none; /* 移除输入框自身边框 */
+      padding: 10px 15px; /* 调整内边距 */
+    }
