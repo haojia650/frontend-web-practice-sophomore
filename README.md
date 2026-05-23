@@ -1,0 +1,9 @@
+WATCH DIRECTLY
+FakeAnimeHeaven	https://haojia650.github.io/frontend-web-practice-sophomore/FakeAnimeHeaven/FakeAnimeHeaven.html
+FakeRegistrationSystem	https://haojia650.github.io/frontend-web-practice-sophomore/FakeRegistrationSystem/FakeRegistrationSystem.html
+FlowerShop	https://haojia650.github.io/frontend-web-practice-sophomore/FlowerShop/FlowerShop.html
+GourmetWorkshop	https://haojia650.github.io/frontend-web-practice-sophomore/GourmetWorkshop/GourmetWorkshop.html
+HelloWorld	https://haojia650.github.io/frontend-web-practice-sophomore/HelloWorld/HelloWorld.html
+KivotosStudentRegistrationSystem	https://haojia650.github.io/frontend-web-practice-sophomore/KivotosStudentRegistrationSystem/KivotosStudentRegistrationSystem.html
+LittleBlog	https://haojia650.github.io/frontend-web-practice-sophomore/LittleBlog/LittleBlog.html
+LoveHome	https://haojia650.github.io/frontend-web-practice-sophomore/LoveHome/LoveHome.html
